@@ -4,18 +4,6 @@
     <con:setting id="46f215c8-892b-47ed-a1a0-598662309811fileName">TestCase-1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="delay" name="Delay" id="bc886680-7545-4541-9767-ac947b4fa7eb">
-    <con:settings/>
-    <con:config>
-      <delay>1000</delay>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="b4457305-d332-4d1c-be98-7fec20855db5">
-    <con:settings/>
-    <con:config>
-      <script/>
-    </con:config>
-  </con:testStep>
   <con:testStep type="restrequest" name="REST Request" id="1c2a4f6a-2948-416f-bea7-c5ee63ae6ee0">
     <con:settings/>
     <con:config service="FileUploadAPI" resourcePath="/api/MobileIMS/UploadFile" methodName="UploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -48,6 +36,35 @@
           <con:entry>jobID</con:entry>
           <con:entry>userid</con:entry>
         </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 2" id="1f2a99e5-3bb7-439d-8b4b-97db382161f2">
+    <con:settings/>
+    <con:config service="FalconLogin" resourcePath="/api/MobileUserManagement/Login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request 2" id="adadcae8-47b4-47e8-9233-3abf64f29072" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://dev-falconservice.carlstahl.ae</con:endpoint>
+        <con:request>{
+"Username":"ram",
+"Password":"carlstahl@55"
+}</con:request>
+        <con:originalUri>http://dev-falconservice.carlstahl.ae/api/MobileUserManagement/Login</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1e0648bc-94cf-4b0d-b027-45b372789d8e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
       </con:restRequest>
     </con:config>
   </con:testStep>
