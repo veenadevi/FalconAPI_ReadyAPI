@@ -18,7 +18,7 @@
   </con:testStep>
   <con:testStep type="restrequest" name="REST Request" id="1c2a4f6a-2948-416f-bea7-c5ee63ae6ee0">
     <con:settings/>
-    <con:config service="http://dev-falconservice.carlstahl.ae" resourcePath="/api/MobileIMS/UploadFile" methodName="UploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="FileUploadAPI" resourcePath="/api/MobileIMS/UploadFile" methodName="UploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="REST Request" id="44d5abb3-e738-4414-8234-0e1342d4b170" mediaType="multipart/form-data" postQueryString="true">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
