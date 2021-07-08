@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="46f215c8-892b-47ed-a1a0-598662309811" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="46f215c8-892b-47ed-a1a0-598662309811fileName">TestCase-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="delay" name="Delay" id="bc886680-7545-4541-9767-ac947b4fa7eb">
+    <con:settings/>
+    <con:config>
+      <delay>1000</delay>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="Groovy Script" id="b4457305-d332-4d1c-be98-7fec20855db5">
+    <con:settings/>
+    <con:config>
+      <script/>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="1c2a4f6a-2948-416f-bea7-c5ee63ae6ee0">
+    <con:settings/>
+    <con:config service="http://dev-falconservice.carlstahl.ae" resourcePath="/api/MobileIMS/UploadFile" methodName="UploadFile" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="44d5abb3-e738-4414-8234-0e1342d4b170" mediaType="multipart/form-data" postQueryString="true">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://dev-falconservice.carlstahl.ae</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://dev-falconservice.carlstahl.ae/api/MobileIMS/UploadFile</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5437085f-b8cf-47c7-8de6-70fdc577124a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="CompanyID" value="ccaa3e3f-4486-4465-b5a1-723f647ead17"/>
+          <con:entry key="jobDetailsID" value="743062"/>
+          <con:entry key="userid" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>jobDetailsID</con:entry>
+          <con:entry>CompanyID</con:entry>
+          <con:entry>jobID</con:entry>
+          <con:entry>userid</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
